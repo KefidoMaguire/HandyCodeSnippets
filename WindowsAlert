@@ -1,0 +1,7 @@
+// Requires Microsoft.Toolkit.Uwp.Notifications 
+new ToastContentBuilder()
+    .AddArgument("action", "viewConversation")
+    .AddArgument("conversationId", 9813)
+    .AddText("Titel")
+    .AddText("Description")
+    .Show(); 
