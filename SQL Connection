@@ -1,0 +1,26 @@
+ private SqlConnection connectionStringBuilder()
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(
+                new SqlConnectionStringBuilder()
+                {
+                    DataSource = "localhost",
+                    InitialCatalog = "",
+                    UserID = "",
+                    Password = "",
+                    IntegratedSecurity = true
+
+                }.ConnectionString
+                );
+                conn.Open();
+                conn.Close();
+                return conn;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message.ToString(),"Could not open SQL Connection");
+            }
+
+            return null;
+        }
